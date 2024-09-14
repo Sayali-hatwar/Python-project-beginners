@@ -1,0 +1,14 @@
+1. pip install PyPDF2
+- PyPDF -- PdfFileReader, PdfFileWriter
+2. Read file -- PdfFileReader('File.pdf')
+3. Creat reference -- PdfFileWriter()
+4. Loop -- add pages
+for page_num in range(pdf.numPages):
+pdfwriter.addPage(pdf.getPage(page_num))
+4. Encrypt -- pass = ''
+pdfwriter.encrypt(pass)
+6.creat newfile
+with open('newfile.pdf', 'wb') as f:
+pdfwriter.write(f)
+5. close file
+f.close()
